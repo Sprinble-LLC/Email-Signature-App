@@ -14,7 +14,7 @@ export default class Header extends Component {
                     <div className="col-md-6 col-sm-12 p">
                         <p style={mStyle}>Curabitur ac dictum odio, eget tempor nunc. Aenean auctor
                             pellentesque orci a laoreet. .</p>
-                        <button type="button" class="btn btn-primary btn-lg">quis velit et eros cursus sagittis</button>
+                        <button type="button" className="btn btn-primary btn-lg">quis velit et eros cursus sagittis</button>
                     </div>
                 </div>
             </div>

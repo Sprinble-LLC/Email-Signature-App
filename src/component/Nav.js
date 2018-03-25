@@ -8,23 +8,23 @@ class Nav extends Component {
 			marginRight: '5px'
 		};
 		return (
-			<nav class="navbar navbar-default mag" role="navigation">
+			<nav className="navbar navbar-default mag" role="navigation">
 				<div className="container">
-					<div class="navbar-header">
+					<div className="navbar-header">
 						<button
 							type="button"
-							class="navbar-toggle"
+							className="navbar-toggle"
 							data-toggle="collapse"
 							data-target=".navbar-ex1-collapse">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
+							<span className="sr-only">Toggle navigation</span>
+							<span className="icon-bar"></span>
+							<span className="icon-bar"></span>
+							<span className="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="#">Title</a>
+						<a className="navbar-brand" href="#">Title</a>
 					</div>
-					<div class="collapse navbar-collapse navbar-ex1-collapse">
-						<ul class="nav navbar-nav navbar-right">
+					<div className="collapse navbar-collapse navbar-ex1-collapse">
+						<ul className="nav navbar-nav navbar-right">
 							<li>
 								<a href="#">Link</a>
 							</li>
@@ -49,8 +49,8 @@ class Nav extends Component {
 							<li>
 								<a href="#">Link</a>
 							</li>
-							<li class="navbar-form">
-								<ul class="navbar-nav dis">
+							<li className="navbar-form">
+								<ul className="navbar-nav dis">
 									<li>
 										<a href="#"><FontAwesomeIcon icon={faFacebookSquare} style={pStyle} size="2x"/>
 										</a>

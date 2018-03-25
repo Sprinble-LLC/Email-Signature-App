@@ -8,15 +8,15 @@ export default class Faq extends Component {
         }
         return (
             <div className="row pad">
-                <div class="panel-group col-sm-11">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
+                <div className="panel-group col-sm-11">
+                    <div className="panel panel-default">
+                        <div className="panel-heading">
+                            <h4 className="panel-title">
                                 <a data-toggle="collapse" href="#collapse1">FAQ</a>
                             </h4>
                         </div>
-                        <div id="collapse1" class="panel-collapse collapse">
-                            <div class="panel-body " style={aStyle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        <div id="collapse1" className="panel-collapse collapse">
+                            <div className="panel-body " style={aStyle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 In luctus ut nulla ac fermentum. Vestibulum ante ipsum primis in faucibus orci
                                 luctus et ultrices posuere cubilia Curae; Sed eget leo porttitor, molestie odio
                                 quis, accumsan odio. Aliquam erat volutpat. Nunc ornare non nibh ac suscipit.

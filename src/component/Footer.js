@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 export default class Footer extends Component {
     render() {
         return (
-            <footer class="blog-footer">
+            <footer className="blog-footer">
                 <div className="container">
                 <h3>Lorem Ipsum</h3>
                     <p>Maecenas cursus rutrum purus, vitae tristique magna auctor quis. Donec nec
