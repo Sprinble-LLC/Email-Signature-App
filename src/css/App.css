@@ -1,28 +1,30 @@
-.App {
+.pad{
+  padding: 30px;
+}
+.mag{
+  margin-bottom: 0px;
+}
+.blog-footer {
+  padding: 2.5rem 0;
+  color: #999;
   text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.font18{
+  font-size: 17.5px;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.dis{
+  display: inline-flex;
 }
-
-.App-title {
-  font-size: 1.5em;
+li{
+  list-style-type: none;
 }
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@media only screen and (max-width: 991px) {
+  .none{
+    display: none;
+  }
+  .p{
+    text-align: center;
+  }
 }
