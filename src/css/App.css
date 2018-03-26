@@ -17,6 +17,12 @@
 .dis{
   display: inline-flex;
 }
+.border{
+  padding-top: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 li{
   list-style-type: none;
 }

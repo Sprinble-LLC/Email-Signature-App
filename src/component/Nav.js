@@ -8,7 +8,7 @@ class Nav extends Component {
 			marginRight: '5px'
 		};
 		return (
-			<nav className="navbar navbar-default mag" role="navigation">
+			<nav className="navbar navbar-default mag">
 				<div className="container">
 					<div className="navbar-header">
 						<button
@@ -21,46 +21,46 @@ class Nav extends Component {
 							<span className="icon-bar"></span>
 							<span className="icon-bar"></span>
 						</button>
-						<a className="navbar-brand" href="#">Title</a>
+						<a className="navbar-brand" href="/#">Title</a>
 					</div>
 					<div className="collapse navbar-collapse navbar-ex1-collapse">
 						<ul className="nav navbar-nav navbar-right">
 							<li>
-								<a href="#">Link</a>
+								<a href="/#">Link</a>
 							</li>
 							<li>
-								<a href="#">Link</a>
+								<a href="/#">Link</a>
 							</li>
 							<li>
-								<a href="#">Link</a>
+								<a href="/#">Link</a>
 							</li>
 							<li>
-								<a href="#">Link</a>
+								<a href="/#">Link</a>
 							</li>
 							<li>
-								<a href="#">Link</a>
+								<a href="/#">Link</a>
 							</li>
 							<li>
-								<a href="#">Link</a>
+								<a href="/#">Link</a>
 							</li>
 							<li>
-								<a href="#">Link</a>
+								<a href="/#">Link</a>
 							</li>
 							<li>
-								<a href="#">Link</a>
+								<a href="/#">Link</a>
 							</li>
 							<li className="navbar-form">
 								<ul className="navbar-nav dis">
 									<li>
-										<a href="#"><FontAwesomeIcon icon={faFacebookSquare} style={pStyle} size="2x"/>
+										<a href="/#"><FontAwesomeIcon icon={faFacebookSquare} style={pStyle} size="2x"/>
 										</a>
 									</li>
 									<li>
-										<a href="#"><FontAwesomeIcon icon={faTwitterSquare} style={pStyle} size="2x"/>
+										<a href="/#"><FontAwesomeIcon icon={faTwitterSquare} style={pStyle} size="2x"/>
 										</a>
 									</li>
 									<li>
-										<a href="#"><FontAwesomeIcon icon={faLinkedin} style={pStyle} size="2x"/>
+										<a href="/#"><FontAwesomeIcon icon={faLinkedin} style={pStyle} size="2x"/>
 										</a>
 									</li>
 								</ul>
