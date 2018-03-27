@@ -7,21 +7,28 @@ import AppView from "./AppView";
 import Faq from "./Faq";
 import Footer from './Footer';
 
+
 class App extends Component {
 	constructor() {
 		super();
 		this.addSign = this.addSign.bind(this);
-		this.onChange = this.onChange.bind(this)
-	  }
-	
-	  state = {
+		this.onChange = this.onChange.bind(this);
+		this.updateSign = this.updateSign.bind(this);
+	  this.state = {
 		Signs: {}
 	  };
+	}
 	addSign(Social) {
 		  const Signs = {...this.state.Signs};
 		  Object.assign(Signs, Social);
 		  this.setState({ Signs });
+		  console.log(this.state.Signs.facebook)
 	  }
+	  updateSign = (updatedSign) => {
+		const Signs = {...this.state.Signs};
+		Object.assign(Signs, updatedSign);
+		this.setState({ Signs });
+	  };
 	  onChange(e) {
 		this.setState({message: e.target.value});
 	}
@@ -48,7 +55,7 @@ class App extends Component {
 					<hr/>
 					<div className="container">
 						<div className="row">
-							<AppArea addSign ={this.addSign}/>
+							<AppArea updateSign={this.updateSign} Social={this.state.Signs} addSign ={this.addSign}/>
 							<AppView Social={this.state.Signs}/>
 						</div>
 					</div>

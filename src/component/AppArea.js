@@ -11,7 +11,7 @@ export default class AppArea extends Component {
 		return (
 			<div className="col-md-6 col-sm-12">
 				<h2 style={aStyle}>Your Information.</h2>
-				<ul className="nav nav-tabs col-sm-12">
+				<ul className="nav nav-tabs col-sm-12 ">
 					<li className="active">
 						<a data-toggle="tab" href="#home">Main</a>
 					</li>
@@ -22,15 +22,15 @@ export default class AppArea extends Component {
 						<a data-toggle="tab" href="#menu2">Style</a>
 					</li>
 				</ul>
-				<div className="tab-content ">
+				<div className="tab-content gone">
 					<div id="home" className="tab-pane fade in active">
-						<Main addSign={this.props.addSign}/>
+						<Main updateSign={this.props.updateSign} Social={this.props.Social} addSign={this.props.addSign}/>
 					</div>
 					<div id="menu1" className="tab-pane fade">
-						<Social addSign={this.props.addSign}/>
+						<Social updateSign={this.props.updateSign} Social={this.props.Social} addSign={this.props.addSign}/>
 					</div>
 					<div id="menu2" className="tab-pane fade">
-						<Style addSign={this.props.addSign}/>
+						<Style updateSign={this.props.updateSign} Social={this.props.Social} addSign={this.props.addSign}/>
 					</div>
 				</div>
 			</div>
