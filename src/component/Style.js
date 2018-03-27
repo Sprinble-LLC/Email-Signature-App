@@ -13,7 +13,7 @@ export default class Style extends Component {
             textColor: this.textColor.value,
             feactureColor: this.feactureColor.value,
             linkcolor : this.linkcolor.value,
-            fontStyle : this.fontStyle.value,
+            fontFamily : this.fontFamily.value,
             fontSize : this.fontSize.value
         }
     this.props.addSign(Social);
@@ -32,7 +32,7 @@ export default class Style extends Component {
             <div className="form-row">
                 <div className="form-group col-sm-6">
                     <label htmlFor="signatureStyle">Signature Style</label>
-                    <select className="form-control" ref={(input) => this.signatureStyle  = input} onChange={(e) => this.handleChange(e)}>
+                    <select value={this.props.Social.signatureStyle} className="form-control" ref={(input) => this.signatureStyle  = input} onChange={(e) => this.handleChange(e)} name="signatureStyle">
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
@@ -40,31 +40,31 @@ export default class Style extends Component {
                 </div>
                 <div className="form-group col-sm-6">
                     <label htmlFor="textColour">Text Color</label>
-                    <input className="form-control" type="color" ref={(input) => this.textColor  = input} onChange={(e) => this.handleChange(e)} name="textColor"/>
+                    <input className="form-control" type="color" defaultValue="#000000" ref={(input) => this.textColor  = input} onChange={(e) => this.handleChange(e)} name="textColor"/>
                 </div>
                 <div className="form-group col-sm-6">
                     <label htmlFor="feactureColor">Feacture Color</label>
-                    <input className="form-control" type="color" ref={(input) => this.feactureColor  = input} onChange={(e) => this.handleChange(e)} name="feactureColor"/>
+                    <input className="form-control" type="color" defaultValue="#d07a15" ref={(input) => this.feactureColor  = input} onChange={(e) => this.handleChange(e)} name="feactureColor"/>
                 </div>
                 <div className="form-group col-sm-6">
                     <label htmlFor="linkcolor">Link Color</label>
-                    <input className="form-control" type="color" ref={(input) => this.linkcolor  = input} onChange={(e) => this.handleChange(e)} name="linkcolor"/>
+                    <input className="form-control" type="color" defaultValue="#2289fb" ref={(input) => this.linkcolor  = input} onChange={(e) => this.handleChange(e)} name="linkcolor"/>
                 </div>
                 <div className="form-group col-sm-6">
-                    <label htmlFor="fontStyle">Font Style</label>
-                    <select className="form-control" ref={(input) => this.fontStyle  = input} onChange={(e) => this.handleChange(e)}>
-                        <option selected>Select Font Style</option>
-                        <option value="1">Sans serif</option>
-                        <option value="2">Serif</option>
+                    <label htmlFor="fontFamily">Font Style</label>
+                    <select className="form-control" ref={(input) => this.fontFamily  = input} onChange={(e) => this.handleChange(e)} name="fontFamily">
+                        <option value="">Select Font Style</option>
+                        <option value="sans-serif">Sans serif</option>
+                        <option value="serif">Serif</option>
                     </select>
                 </div>
                 <div className="form-group col-sm-6">
                     <label htmlFor="fontSize">Font Size</label>
-                    <select className="form-control" ref={(input) => this.fontSize  = input} onChange={(e) => this.handleChange(e)}>
-                        <option selected>Select Font Size</option>
-                        <option value="1.5rem">Large</option>
-                        <option value="1rem">Medium</option>
-                        <option value="0.5rem">Small</option>
+                    <select className="form-control" ref={(input) => this.fontSize  = input} onChange={(e) => this.handleChange(e)} name="fontSize">
+                        <option value="">Select Font Size</option>
+                        <option value="2rem">Large</option>
+                        <option value="1.7rem">Medium</option>
+                        <option value="1.3rem">Small</option>
                     </select>
                 </div>
             </div>
