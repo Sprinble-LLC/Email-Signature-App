@@ -11,6 +11,10 @@
   background-color: #f9f9f9;
   border-top: .05rem solid #e5e5e5;
 }
+.bl{
+  border-left-style: solid;
+  border-left-width: 2px;
+}
 .font18{
   font-size: 17.5px;
 }
@@ -36,7 +40,6 @@
 .gon{
   padding-top: 20px;
 }
-.tel:before { content: 'p:'; }
 li{
   list-style-type: none;
 }
