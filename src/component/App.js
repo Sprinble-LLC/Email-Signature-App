@@ -54,7 +54,7 @@ class App extends Component {
 					</div>
 					<hr/>
 					<div className="container">
-						<div className="row">
+						<div className="row col-sm-12">
 							<AppArea updateSign={this.updateSign} Social={this.state.Signs} addSign ={this.addSign}/>
 							<AppView Social={this.state.Signs}/>
 						</div>

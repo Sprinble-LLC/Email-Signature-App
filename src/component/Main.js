@@ -50,15 +50,6 @@ export default class Main extends Component {
                         Last Name"  />
                     </div>
                     <div className="form-group col-sm-6">
-                        <label htmlFor="email">Email</label>
-                        <input className="form-control" type="email" ref={(input) => this.email  = input} onChange={(e) => this.handleChange(e)} name="email" placeholder="Email"  />
-                    </div>
-                    <div className="form-group col-sm-6">
-                        <label htmlFor="phoneNo">Phone No</label>
-                        <input className="form-control" type="tel" ref={(input) => this.phoneNo  = input} onChange={(e) => this.handleChange(e)} name="phoneNo" placeholder="
-                        Phone No"  />
-                    </div>
-                    <div className="form-group col-sm-6">
                         <label htmlFor="jobTitle">Job Title</label>
                         <input className="form-control" type="text" ref={(input) => this.jobTitle  = input} onChange={(e) => this.handleChange(e)} name="jobTitle" placeholder="Job Title"  />
                     </div>
@@ -71,10 +62,11 @@ export default class Main extends Component {
                         <label htmlFor="companyName">Company Name</label>
                         <input className="form-control" type="text" ref={(input) => this.companyName  = input} onChange={(e) => this.handleChange(e)} name="companyName" placeholder="Company Name"  />
                     </div>
+                    
                     <div className="form-group col-sm-6">
-                        <label htmlFor="website">Website</label>
-                        <input className="form-control" type="text" ref={(input) => this.website  = input} onChange={(e) => this.handleChange(e)} name="website" placeholder="
-                        Website"  />
+                        <label htmlFor="phoneNo">Phone No</label>
+                        <input className="form-control" type="tel" ref={(input) => this.phoneNo  = input} onChange={(e) => this.handleChange(e)} name="phoneNo" placeholder="
+                        Phone No"  />
                     </div>
                     <div className="form-group col-sm-6">
                     <label htmlFor="officeFaxNo">Office Fax No</label>
@@ -85,6 +77,15 @@ export default class Main extends Component {
                     <label htmlFor="officePhoneNo">Office Phone No</label>
                         <input className="form-control" type="tel" ref={(input) => this.officePhoneNo  = input} onChange={(e) => this.handleChange(e)} name="officePhoneNo" placeholder="
                         Office Phone No"  />
+                    </div>
+                    <div className="form-group col-sm-6">
+                        <label htmlFor="email">Email</label>
+                        <input className="form-control" type="email" ref={(input) => this.email  = input} onChange={(e) => this.handleChange(e)} name="email" placeholder="Email"  />
+                    </div>
+                    <div className="form-group col-sm-6">
+                        <label htmlFor="website">Website</label>
+                        <input className="form-control" type="text" ref={(input) => this.website  = input} onChange={(e) => this.handleChange(e)} name="website" placeholder="
+                        Website"  />
                     </div>
                     <div className="form-group col-sm-12">
                         <label htmlFor="address1">ADDRESS 1</label>

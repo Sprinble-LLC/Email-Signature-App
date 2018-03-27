@@ -62,9 +62,9 @@ export default class Style extends Component {
                     <label htmlFor="fontSize">Font Size</label>
                     <select className="form-control" ref={(input) => this.fontSize  = input} onChange={(e) => this.handleChange(e)}>
                         <option selected>Select Font Size</option>
-                        <option value="Large">Large</option>
-                        <option value="Medium">Medium</option>
-                        <option value="Small">Small</option>
+                        <option value="1.5rem">Large</option>
+                        <option value="1rem">Medium</option>
+                        <option value="0.5rem">Small</option>
                     </select>
                 </div>
             </div>

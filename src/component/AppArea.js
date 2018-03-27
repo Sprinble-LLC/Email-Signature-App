@@ -9,7 +9,7 @@ export default class AppArea extends Component {
 			fontSize: '20px'
 		}
 		return (
-			<div className="col-md-6 col-sm-12">
+			<div className="col-sm-6 col-xs-12">
 				<h2 style={aStyle}>Your Information.</h2>
 				<ul className="nav nav-tabs col-sm-12 ">
 					<li className="active">

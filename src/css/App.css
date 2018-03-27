@@ -26,6 +26,9 @@
 .gone{
   padding-top: 60px;
 }
+.gon{
+  padding-top: 20px;
+}
 .tel:before { content: 'p:'; }
 li{
   list-style-type: none;
