@@ -10,7 +10,7 @@ export default class Footer extends Component {
                         lorem nibh. Maecenas viverra nulla lectus, vitae imperdiet sapien mattis ut.
                         Maecenas congue elit in dolor dictum, eu elementum arcu sagittis. .</p>
                     <p>
-                        <a href="#">Back to top</a>
+                        <a href="/#">Back to top</a>
                     </p>
                 </div>
             </footer>
