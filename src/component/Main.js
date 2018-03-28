@@ -103,7 +103,8 @@ export default class Main extends Component {
                         Image must be suitably sized for your signature as it will be displayed actual size.
                         (Our Help Page includes some useful information on creating images for your signature)</em>
                     </div>
-                    <button className="btn btn-primary" type="submit">Create Email Signature</button>
+                    <button className="btn btn-primary" type="submit">Create Email Signature</button><span>&emsp;</span>
+                    <button type="reset" className="btn btn-danger">Reset Form input</button>
                 </div>
             </form>
         );

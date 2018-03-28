@@ -69,7 +69,8 @@ export default class Style extends Component {
                     </select>
                 </div>
             </div>
-            <button className="btn btn-primary" type="submit">Create Email Signature</button>
+            <button className="btn btn-primary" type="submit">Create Email Signature</button><span>&emsp;</span>
+            <button type="reset" className="btn btn-danger">Reset Form input</button>
         </form>
         );
     }

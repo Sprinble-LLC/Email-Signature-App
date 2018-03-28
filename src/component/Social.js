@@ -46,8 +46,10 @@ export default class Social extends Component {
                         <label htmlFor="linkedIn">LinkedIn</label>
                         <input className="form-control" type="text" ref={(input) => this.linkedIn  = input} onChange={(e) => this.handleChange(e)} name="linkedIn" placeholder="LinkedIn"  />
                     </div>
+                   
                 </div>
-                <button className="btn btn-primary" type="submit">Create Email Signature</button>
+                 <button className="btn btn-primary" type="submit">Create Email Signature</button><span>&emsp;</span>
+                <button type="reset" className="btn btn-danger">Reset Form input</button>
             </form>
         );
     }

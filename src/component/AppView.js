@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import {faFacebookSquare, faLinkedin, faTwitterSquare, faInstagram} from '@fortawesome/fontawesome-free-brands';
+import '../css/appView.css'
 
 export default class AppView extends Component {   
     render() {
@@ -10,11 +11,10 @@ export default class AppView extends Component {
         const tc = Social.textColor;
         const fs = Social.fontSize;
         const ff = Social.fontFamily;
-        const aStyle = {fontSize: '20px'}
         const dStyle = {margin: '5px'}
         const cStyle = {display: 'none'}
         const bStyle = {fontSize: fs,fontFamily: ff, color : tc}
-        const bl = {borderLeftColor : fc , borderLeftStyle: 'solid',borderLeftWidth: '2px', color : tc} 
+        const bl = {borderLeftColor : fc , borderLeftStyle: 'solid',borderLeftWidth: '2px',paddingLeft:'10px' ,color : tc} 
         const fon = '3';
         const p = fon !== '3'? {display: 'none'} : {color: fc,fontSize: fs,fontFamily: ff};
         const j = fon !== '3'? {display: 'none'} : {color: tc,fontSize: fs,fontFamily: ff};
@@ -44,8 +44,8 @@ export default class AppView extends Component {
         const twt = <a href={this.props.Social.twitter}><FontAwesomeIcon icon={faTwitterSquare} style={styl} size="2x"/></a>
         const lin = <a href={this.props.Social.linkedIn}><FontAwesomeIcon icon={faLinkedin} style={style} size="2x"/></a>
         const Ig = <a href={this.props.Social.instagram}><FontAwesomeIcon icon={faInstagram} style={s} size="2x"/></a>
-        const pho = <p class="dis" style={d}><span style={p}>tel:<span>&#160;</span></span><span style={j}>{Social.officePhoneNo}</span><span>&#160;</span></p>
-        const tel = <p class="dis" style={b}><span style={p}>p:<span>&#160;</span></span><span style={j}>{Social.phoneNo}</span></p>
+        const pho = <p className="dis" style={d}><span style={p}>tel:<span>&#160;</span></span><span style={j}>{Social.officePhoneNo}</span><span>&#160;</span></p>
+        const tel = <p className="dis" style={b}><span style={p}>p:<span>&#160;</span></span><span style={j}>{Social.phoneNo}</span></p>
         const fax = <p style={f}><span style={p}>fax:<span>&#160;</span></span>{Social.officeFaxNo}</p>
         const add = <p style={h}><span style={p}>add 1:<span>&#160;</span></span>{Social.address1}</p>
         const add2 = <p style={z}><span style={p}>add 2:<span>&#160;</span></span>{Social.address2}</p>
@@ -56,15 +56,14 @@ export default class AppView extends Component {
         if (Social.signatureStyle === '1'){
             return (
                 <div className="col-sm-6 col-xs-12 gon">
-                <p style={aStyle}>Signature Preview</p>
                 <div style={j}>
                     {name}
                     {img}
                     <i>{Social.jobTitle}</i>
                     <p>{Social.department}</p>
-                    <b>
-                        <h4>{Social.companyName}</h4>
-                    </b>
+                    <h4>
+                            <b>{Social.companyName}</b>
+                        </h4>
                     <div>{pho}{tel}</div>
                     {fax}
                     {add}
@@ -81,14 +80,13 @@ export default class AppView extends Component {
         if (Social.signatureStyle === '2'){
             return (
                 <div className="col-sm-6 col-xs-12 gon">
-                    <p style={aStyle}>Signature Preview</p>
                     <div style={j}>
                         {name}
                         <i>{Social.jobTitle}</i>
                         <p>{Social.department}</p>
-                        <b>
-                            <h4>{Social.companyName}</h4>
-                        </b>
+                        <h4>
+                            <b>{Social.companyName}</b>
+                        </h4>
                         <div>{pho}{tel}</div>
                         {fax}
                         {add}
@@ -105,19 +103,19 @@ export default class AppView extends Component {
         }
         if (Social.signatureStyle === '3'){
             return (
-                <table className=" row col-xs-6 gon">
-                <p style={aStyle}>Signature Preview</p>
+                <table className=" row col-xs- go">
+                    <tbody>
                     <tr>
-                    <td className="col-xs-6">
+                    <td>
                         {img}</td>
                 
-                    <td style={bl} className="col-xs-6">
+                    <td style={bl}>
                     {name}
                         <i>{Social.jobTitle}</i>
                         <p>{Social.department}</p>
-                        <b>
-                            <h4>{Social.companyName}</h4>
-                        </b>
+                        <h4>
+                            <b>{Social.companyName}</b>
+                        </h4>
                         <div>{pho}{tel}</div>
                         {fax}
                         {add}
@@ -129,20 +127,20 @@ export default class AppView extends Component {
                         </div>
                     </td>
                     </tr>
+                    </tbody>
                 </table>
             )
         }
         return (
             <div className="col-sm-6 col-xs-12 gon">
-                <p style={aStyle}>Signature Preview</p>
                 <div style={j}>
                     {img}
                     {name}
                     <i>{Social.jobTitle}</i>
                     <p>{Social.department}</p>
-                    <b>
-                        <h4>{Social.companyName}</h4>
-                    </b>
+                    <h4>
+                            <b>{Social.companyName}</b>
+                        </h4>
                     <div>{pho}{tel}</div>
                     {fax}
                     {add}
