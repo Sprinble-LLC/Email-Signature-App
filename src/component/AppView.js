@@ -45,7 +45,7 @@ export default class AppView extends Component {
         const lin = <a href={this.props.Social.linkedIn}><FontAwesomeIcon icon={faLinkedin} style={style} size="2x"/></a>
         const Ig = <a href={this.props.Social.instagram}><FontAwesomeIcon icon={faInstagram} style={s} size="2x"/></a>
         const pho = <p className="dis" style={d}><span style={p}>tel:<span>&#160;</span></span><span style={j}>{Social.officePhoneNo}</span><span>&#160;</span></p>
-        const tel = <p className="dis" style={b}><span style={p}>p:<span>&#160;</span></span><span style={j}>{Social.phoneNo}</span></p>
+        const tel = <p className="dis" style={b}><span style={p}>p:<span>&#160;</span></span><p style={j}>{Social.phoneNo}</p></p>
         const fax = <p style={f}><span style={p}>fax:<span>&#160;</span></span>{Social.officeFaxNo}</p>
         const add = <p style={h}><span style={p}>add 1:<span>&#160;</span></span>{Social.address1}</p>
         const add2 = <p style={z}><span style={p}>add 2:<span>&#160;</span></span>{Social.address2}</p>
@@ -55,26 +55,36 @@ export default class AppView extends Component {
         const name = <h3 style={p}>{Social.lastName} {Social.firstName}</h3>
         if (Social.signatureStyle === '1'){
             return (
-                <div className="col-sm-6 col-xs-12 gon">
-                <div style={j}>
-                    {name}
-                    {img}
-                    <i>{Social.jobTitle}</i>
-                    <p>{Social.department}</p>
-                    <h4>
-                            <b>{Social.companyName}</b>
-                        </h4>
-                    <div>{pho}{tel}</div>
-                    {fax}
-                    {add}
-                    {add2}
-                    {web}
-                    {email}
-                    <div className="dis">
-                        {fac}{twt}{lin}{Ig}
-                    </div>
-                </div>
-            </div>
+                <table className="col-sm-6 col-xs-12 gon">
+                    <tbody style={j}>
+                        <tr>
+                        <td>{img}</td>
+                        </tr>
+                        <tr>
+                        <td>
+                            {name}
+                        <i>{Social.jobTitle}</i>
+                        <p>{Social.department}</p>
+                        <h4>
+                                <b>{Social.companyName}</b>
+                            </h4>
+                        <div>{pho}{tel}</div>
+                        {fax}
+                        {add}
+                        {add2}
+                        {web}
+                        {email}
+                        </td>
+                        </tr>
+                        <tr>
+                            <td>
+                        <div className="dis">
+                            {fac}{twt}{lin}{Ig}
+                        </div>
+                        </td>
+                        </tr>
+                    </tbody>
+                </table>
             )
         }
         if (Social.signatureStyle === '2'){

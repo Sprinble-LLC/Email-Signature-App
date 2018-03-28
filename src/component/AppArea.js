@@ -23,7 +23,7 @@ export default class AppArea extends Component {
 		clipboard.on('error', function(e) {
 			console.log(e);
 		});
-    }
+	}
 	render() {
 		const aStyle = {
 			fontSize: '20px'
@@ -57,7 +57,7 @@ export default class AppArea extends Component {
 				</div><br/>
 				<a className="btn btn-success" data-toggle="modal" href='#modal-id'>Generate Email Signature</a>
 				<div className="modal fade" id="modal-id">
-					<div className="modal-dialog ">
+					<div className="modal-dialog">
 						<div className="modal-content">
 							<div className="modal-header">
 								<button type="button" className="close" data-dismiss="modal" aria-hidden="true">&times;</button>
