@@ -12,7 +12,6 @@ class App extends Component {
 	constructor() {
 		super();
 		this.addSign = this.addSign.bind(this);
-		this.onChange = this.onChange.bind(this);
 		this.updateSign = this.updateSign.bind(this);
 	  this.state = {
 		Signs: {}
@@ -22,18 +21,16 @@ class App extends Component {
 		  const Signs = {...this.state.Signs};
 		  Object.assign(Signs, Social);
 		  this.setState({ Signs });
-		  console.log(this.state.Signs.signatureStyle)
-		  console.log(this.state.Signs.signatureStyle === '1')
 	  }
 	  updateSign = (updatedSign) => {
 		const Signs = {...this.state.Signs};
 		Object.assign(Signs, updatedSign);
 		this.setState({ Signs });
 	  };
-	  onChange(e) {
-		this.setState({message: e.target.value});
-	}
+
 	render() {
+
+	const aStyle = {fontSize: '20px'}
 		return (
 			<div>
 				<Nav/>
@@ -55,9 +52,14 @@ class App extends Component {
 					</div>
 					<hr/>
 					<div className="container">
-						<div className="row col-sm-12">
+						<div className="row">
+							<div className="col-sm-">
 							<AppArea updateSign={this.updateSign} Social={this.state.Signs} addSign ={this.addSign}/>
+							</div>
+							<div className="col-sm-6">
+							<p style={aStyle}>Signature Preview</p>
 							<AppView Social={this.state.Signs}/>
+							</div>
 						</div>
 					</div>
 					<Faq/>

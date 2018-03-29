@@ -40,14 +40,15 @@ export default class Main extends Component {
         return (
             <form ref={(input) => this.SignForm = input} onSubmit={(e) => this.createSign(e)} >
                 <div className="form-row">
-                    <div className="form-group col-sm-6">
-                        <label htmlFor="firstName">First Name</label>
-                        <input className="form-control" type="text" ref={(input) => this.firstName = input} name="firstName" onChange={(e) => this.handleChange(e)} placeholder="First Name"  />
-                    </div>
+                    
                     <div className="form-group col-sm-6">
                         <label htmlFor="lastName">Last Name</label>
                         <input className="form-control" type="text" ref={(input) => this.lastName  = input} onChange={(e) => this.handleChange(e)} name="lastName" placeholder="
                         Last Name"  />
+                    </div>
+                    <div className="form-group col-sm-6">
+                        <label htmlFor="firstName">First Name</label>
+                        <input className="form-control" type="text" ref={(input) => this.firstName = input} name="firstName" onChange={(e) => this.handleChange(e)} placeholder="First Name"  />
                     </div>
                     <div className="form-group col-sm-6">
                         <label htmlFor="jobTitle">Job Title</label>
@@ -62,16 +63,10 @@ export default class Main extends Component {
                         <label htmlFor="companyName">Company Name</label>
                         <input className="form-control" type="text" ref={(input) => this.companyName  = input} onChange={(e) => this.handleChange(e)} name="companyName" placeholder="Company Name"  />
                     </div>
-                    
                     <div className="form-group col-sm-6">
                         <label htmlFor="phoneNo">Phone No</label>
                         <input className="form-control" type="tel" ref={(input) => this.phoneNo  = input} onChange={(e) => this.handleChange(e)} name="phoneNo" placeholder="
                         Phone No"  />
-                    </div>
-                    <div className="form-group col-sm-6">
-                    <label htmlFor="officeFaxNo">Office Fax No</label>
-                        <input className="form-control" type="tel" ref={(input) => this.officeFaxNo  = input} onChange={(e) => this.handleChange(e)} name="officeFaxNo" placeholder="
-                        Office Fax No"  />
                     </div>
                     <div className="form-group col-sm-6">
                     <label htmlFor="officePhoneNo">Office Phone No</label>
@@ -79,13 +74,18 @@ export default class Main extends Component {
                         Office Phone No"  />
                     </div>
                     <div className="form-group col-sm-6">
-                        <label htmlFor="email">Email</label>
-                        <input className="form-control" type="email" ref={(input) => this.email  = input} onChange={(e) => this.handleChange(e)} name="email" placeholder="Email"  />
+                    <label htmlFor="officeFaxNo">Office Fax No</label>
+                        <input className="form-control" type="tel" ref={(input) => this.officeFaxNo  = input} onChange={(e) => this.handleChange(e)} name="officeFaxNo" placeholder="
+                        Office Fax No"  />
                     </div>
                     <div className="form-group col-sm-6">
                         <label htmlFor="website">Website</label>
                         <input className="form-control" type="text" ref={(input) => this.website  = input} onChange={(e) => this.handleChange(e)} name="website" placeholder="
                         Website"  />
+                    </div>
+                    <div className="form-group col-sm-6">
+                        <label htmlFor="email">Email</label>
+                        <input className="form-control" type="email" ref={(input) => this.email  = input} onChange={(e) => this.handleChange(e)} name="email" placeholder="Email"  />
                     </div>
                     <div className="form-group col-sm-12">
                         <label htmlFor="address1">ADDRESS 1</label>
@@ -103,7 +103,7 @@ export default class Main extends Component {
                         Image must be suitably sized for your signature as it will be displayed actual size.
                         (Our Help Page includes some useful information on creating images for your signature)</em>
                     </div>
-                    <button className="btn btn-primary" type="submit">Create Email Signature</button>
+                    <button type="reset" className="btn btn-danger">Reset Form input</button>
                 </div>
             </form>
         );

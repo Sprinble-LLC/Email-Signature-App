@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import {faFacebookSquare, faLinkedin, faTwitterSquare, faInstagram} from '@fortawesome/fontawesome-free-brands';
+import '../css/appView.css'
 
 export default class AppView extends Component {   
     render() {
@@ -10,13 +11,12 @@ export default class AppView extends Component {
         const tc = Social.textColor;
         const fs = Social.fontSize;
         const ff = Social.fontFamily;
-        const aStyle = {fontSize: '20px'}
         const dStyle = {margin: '5px'}
         const cStyle = {display: 'none'}
         const bStyle = {fontSize: fs,fontFamily: ff, color : tc}
-        const bl = {borderLeftColor : fc , borderLeftStyle: 'solid',borderLeftWidth: '2px', color : tc} 
+        const bl = {borderLeftColor : fc , borderLeftStyle: 'solid',borderLeftWidth: '1px',paddingRight:'12px' ,color : tc} 
         const fon = '3';
-        const p = fon !== '3'? {display: 'none'} : {color: fc,fontSize: fs,fontFamily: ff};
+        const p = fon !== '3'? {display: 'none'} : {color: fc,fontSize: fs,fontFamily: ff, width:'20'};
         const j = fon !== '3'? {display: 'none'} : {color: tc,fontSize: fs,fontFamily: ff};
         const dis = Social.facebook === undefined || Social.facebook === "";
         const sty = dis ? cStyle: dStyle;
@@ -44,116 +44,193 @@ export default class AppView extends Component {
         const twt = <a href={this.props.Social.twitter}><FontAwesomeIcon icon={faTwitterSquare} style={styl} size="2x"/></a>
         const lin = <a href={this.props.Social.linkedIn}><FontAwesomeIcon icon={faLinkedin} style={style} size="2x"/></a>
         const Ig = <a href={this.props.Social.instagram}><FontAwesomeIcon icon={faInstagram} style={s} size="2x"/></a>
-        const pho = <p class="dis" style={d}><span style={p}>tel:<span>&#160;</span></span><span style={j}>{Social.officePhoneNo}</span><span>&#160;</span></p>
-        const tel = <p class="dis" style={b}><span style={p}>p:<span>&#160;</span></span><span style={j}>{Social.phoneNo}</span></p>
-        const fax = <p style={f}><span style={p}>fax:<span>&#160;</span></span>{Social.officeFaxNo}</p>
-        const add = <p style={h}><span style={p}>add 1:<span>&#160;</span></span>{Social.address1}</p>
-        const add2 = <p style={z}><span style={p}>add 2:<span>&#160;</span></span>{Social.address2}</p>
+        const pho = <span style={d}><span style={p}>tel:<span>&#160;</span></span>{Social.officePhoneNo}</span>
+        const tel = <span style={b}><span style={p}>p:<span>&#160;</span></span>{Social.phoneNo}</span>
+        const fax = <span style={f}><span style={p}>fax:<span>&#160;</span></span>{Social.officeFaxNo}</span>
+        const add = <span style={h}><span style={p}>add 1:<span>&#160;</span></span>{Social.address1}</span>
+        const add2 = <span style={z}><span style={p}>add 2:<span>&#160;</span></span>{Social.address2}</span>
         const web = <a href={Social.website} style={l}><span style={p}>web:<span>&#160;</span></span>{Social.website}</a>
-        const email = <p><a href={Social.email} style={n}><span style={p}>email:<span>&#160;</span></span>{Social.email}</a></p>
+        const email = <a href={Social.email}style={n}><span style={p}>email:<span>&#160;</span></span>{Social.email}</a>
         const img = <img className="img-responsive" src={Social.avatar} alt=""/>
-        const name = <h3 style={p}>{Social.lastName} {Social.firstName}</h3>
+        const lname = <h3 style={p}>{Social.lastName}<span>&#160;</span>{Social.firstName}</h3>
+    
         if (Social.signatureStyle === '1'){
             return (
-                <div className="col-sm-6 col-xs-12 gon">
-                <p style={aStyle}>Signature Preview</p>
-                <div style={j}>
-                    {name}
-                    {img}
-                    <i>{Social.jobTitle}</i>
-                    <p>{Social.department}</p>
-                    <b>
-                        <h4>{Social.companyName}</h4>
-                    </b>
-                    <div>{pho}{tel}</div>
-                    {fax}
-                    {add}
-                    {add2}
-                    {web}
-                    {email}
-                    <div className="dis">
+            <table className="col-sm-6 col-xs-12 ">
+                <tbody style={j}>
+                    <tr>
+                        <td>{lname}</td>
+                    </tr>
+                    <tr colSpan="2">
+                        <td>{img}</td>
+                    </tr>
+                    <tr colSpan="2">
+                        <td>{Social.jobTitle}</td>
+                    </tr>
+                    <tr colSpan="2">
+                        <td>{Social.department}</td>
+                    </tr>
+                    <tr colSpan="2">
+                        <td>{Social.companyName}</td>
+                    </tr>
+                    <tr>
+                        <td>{tel}<span>&#160;</span>{pho}</td>
+                    </tr>
+                    <tr colSpan="2">
+                        <td>{fax}</td>
+                    </tr>
+                    <tr colSpan="2">
+                        <td>{add}</td>
+                    </tr>
+                    <tr colSpan="2">
+                        <td>{add2}</td>
+                    </tr>
+                    <tr>
+                        <td>{web}<span>&#160;</span>{email}</td>
+                    </tr>
+                    <tr>
+                    <td style={{display:'inline-flex', marginBottom:'0px'}}>
                         {fac}{twt}{lin}{Ig}
-                    </div>
-                </div>
-            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
             )
         }
         if (Social.signatureStyle === '2'){
             return (
-                <div className="col-sm-6 col-xs-12 gon">
-                    <p style={aStyle}>Signature Preview</p>
-                    <div style={j}>
-                        {name}
-                        <i>{Social.jobTitle}</i>
-                        <p>{Social.department}</p>
-                        <b>
-                            <h4>{Social.companyName}</h4>
-                        </b>
-                        <div>{pho}{tel}</div>
-                        {fax}
-                        {add}
-                        {add2}
-                        {web}
-                        {email}
-                        <div className="dis">
+                <table className="col-sm-6 col-xs-12 ">
+                    <tbody style={j}>
+                    <tr>
+                        <td>{lname}</td>
+                    </tr>
+                        <tr colSpan="2">
+                            <td>{Social.jobTitle}</td>
+                        </tr>
+                        <tr colSpan="2">
+                            <td>{Social.department}</td>
+                        </tr>
+                        <tr colSpan="2">
+                            <td>{Social.companyName}</td>
+                        </tr>
+                        <tr>
+                            <td>{tel}<span>&#160;</span>{pho}</td>
+                        </tr>
+                        <tr colSpan="2">
+                            <td>{fax}</td>
+                        </tr>
+                        <tr colSpan="2">
+                            <td>{add}</td>
+                        </tr>
+                        <tr colSpan="2">
+                            <td>{add2}</td>
+                        </tr>
+                        <tr>
+                            <td>{web}<span>&#160;</span>{email}</td>
+                        </tr>
+                        <tr>
+                        <td style={{display:'inline-flex', marginBottom:'0px'}}>
                             {fac}{twt}{lin}{Ig}
-                        </div>
-                        {img}
-                    </div>
-                </div>
+                            </td>
+                        </tr>
+                        <tr colSpan="2">
+                            <td>{img}</td>
+                        </tr>
+                    </tbody>
+                </table>
             )
         }
         if (Social.signatureStyle === '3'){
             return (
-                <table className=" row col-xs-6 gon">
-                <p style={aStyle}>Signature Preview</p>
+                <table className=" row col-sm-6 go">
+                    <tbody>
                     <tr>
-                    <td className="col-xs-6">
-                        {img}</td>
-                
-                    <td style={bl} className="col-xs-6">
-                    {name}
-                        <i>{Social.jobTitle}</i>
-                        <p>{Social.department}</p>
-                        <b>
-                            <h4>{Social.companyName}</h4>
-                        </b>
-                        <div>{pho}{tel}</div>
-                        {fax}
-                        {add}
-                        {add2}
-                        {web}
-                        {email}
-                        <div className="dis">
-                            {fac}{twt}{lin}{Ig}
-                        </div>
-                    </td>
+                        <td>
+                        {img}
+                        </td>
+                        <tb>
+                        <table style={bl} >
+                            <tbody>
+                            <tr>
+                                <td>{lname}</td>
+                            </tr>
+                            <tr colSpan="2">
+                                <td>{Social.jobTitle}</td>
+                            </tr>
+                            <tr colSpan="2">
+                                <td>{Social.department}</td>
+                            </tr>
+                            <tr colSpan="2">
+                                <td>{Social.companyName}</td>
+                            </tr>
+                            <tr>
+                                <td>{tel}<span>&#160;</span>{pho}</td>
+                            </tr>
+                            <tr colSpan="2">
+                                <td>{fax}</td>
+                            </tr>
+                            <tr colSpan="2">
+                                <td>{add}</td>
+                            </tr>
+                            <tr colSpan="2">
+                                <td>{add2}</td>
+                            </tr>
+                            <tr>
+                                <td>{web}<span>&#160;</span>{email}</td>
+                            </tr>
+                            <tr>
+                                <td style={{display:'inline-flex', marginBottom:'0px'}}>
+                                {fac}{twt}{lin}{Ig}
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        </tb>
                     </tr>
+                    </tbody>
                 </table>
             )
         }
         return (
-            <div className="col-sm-6 col-xs-12 gon">
-                <p style={aStyle}>Signature Preview</p>
-                <div style={j}>
-                    {img}
-                    {name}
-                    <i>{Social.jobTitle}</i>
-                    <p>{Social.department}</p>
-                    <b>
-                        <h4>{Social.companyName}</h4>
-                    </b>
-                    <div>{pho}{tel}</div>
-                    {fax}
-                    {add}
-                    {add2}
-                    {web}
-                    {email}
-                    <div className="dis">
-                        {fac}{twt}{lin}{Ig}
-                    </div>
-                </div>
-            </div>
+            <table className="col-sm-6 col-xs-12 ">
+            <tbody style={j}>
+            <tr colSpan="2">
+                <td>{img}</td>
+            </tr>
+            <tr>
+                <td>{lname}</td>
+            </tr>
+            <tr colSpan="2">
+                <td>{Social.jobTitle}</td>
+            </tr>
+            <tr colSpan="2">
+                <td>{Social.department}</td>
+            </tr>
+            <tr colSpan="2">
+                <td>{Social.companyName}</td>
+            </tr>
+            <tr>
+                <td>{tel}<span>&#160;</span>{pho}</td>
+            </tr>
+            <tr colSpan="2">
+                <td>{fax}</td>
+            </tr>
+            <tr colSpan="2">
+                <td>{add}</td>
+            </tr>
+            <tr colSpan="2">
+                <td>{add2}</td>
+            </tr>
+            <tr>
+                <td>{web}<span>&#160;</span>{email}</td>
+            </tr>
+            <tr>
+            <td style={{display:'inline-flex', marginBottom:'0px'}}>
+                {fac}{twt}{lin}{Ig}
+                </td>
+            </tr>
+            </tbody>
+        </table>
         );
     }
 }
