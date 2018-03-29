@@ -14,9 +14,9 @@ export default class AppView extends Component {
         const dStyle = {margin: '5px'}
         const cStyle = {display: 'none'}
         const bStyle = {fontSize: fs,fontFamily: ff, color : tc}
-        const bl = {borderLeftColor : fc , borderLeftStyle: 'solid',borderLeftWidth: '2px',paddingLeft:'10px' ,color : tc} 
+        const bl = {borderLeftColor : fc , borderLeftStyle: 'solid',borderLeftWidth: '1px',paddingRight:'12px' ,color : tc} 
         const fon = '3';
-        const p = fon !== '3'? {display: 'none'} : {color: fc,fontSize: fs,fontFamily: ff};
+        const p = fon !== '3'? {display: 'none'} : {color: fc,fontSize: fs,fontFamily: ff, width:'20'};
         const j = fon !== '3'? {display: 'none'} : {color: tc,fontSize: fs,fontFamily: ff};
         const dis = Social.facebook === undefined || Social.facebook === "";
         const sty = dis ? cStyle: dStyle;
@@ -44,124 +44,201 @@ export default class AppView extends Component {
         const twt = <a href={this.props.Social.twitter}><FontAwesomeIcon icon={faTwitterSquare} style={styl} size="2x"/></a>
         const lin = <a href={this.props.Social.linkedIn}><FontAwesomeIcon icon={faLinkedin} style={style} size="2x"/></a>
         const Ig = <a href={this.props.Social.instagram}><FontAwesomeIcon icon={faInstagram} style={s} size="2x"/></a>
-        const pho = <p className="dis" style={d}><span style={p}>tel:<span>&#160;</span></span><span style={j}>{Social.officePhoneNo}</span><span>&#160;</span></p>
-        const tel = <p className="dis" style={b}><span style={p}>p:<span>&#160;</span></span><p style={j}>{Social.phoneNo}</p></p>
-        const fax = <p style={f}><span style={p}>fax:<span>&#160;</span></span>{Social.officeFaxNo}</p>
-        const add = <p style={h}><span style={p}>add 1:<span>&#160;</span></span>{Social.address1}</p>
-        const add2 = <p style={z}><span style={p}>add 2:<span>&#160;</span></span>{Social.address2}</p>
+        const pho = <span style={d}><span style={p}>tel:<span>&#160;</span></span>{Social.officePhoneNo}</span>
+        const tel = <span style={b}><span style={p}>p:<span>&#160;</span></span>{Social.phoneNo}</span>
+        const fax = <span style={f}><span style={p}>fax:<span>&#160;</span></span>{Social.officeFaxNo}</span>
+        const add = <span style={h}><span style={p}>add 1:<span>&#160;</span></span>{Social.address1}</span>
+        const add2 = <span style={z}><span style={p}>add 2:<span>&#160;</span></span>{Social.address2}</span>
         const web = <a href={Social.website} style={l}><span style={p}>web:<span>&#160;</span></span>{Social.website}</a>
-        const email = <p><a href={Social.email} style={n}><span style={p}>email:<span>&#160;</span></span>{Social.email}</a></p>
+        const email = <a href={Social.email}style={n}><span style={p}>email:<span>&#160;</span></span>{Social.email}</a>
         const img = <img className="img-responsive" src={Social.avatar} alt=""/>
-        const name = <h3 style={p}>{Social.lastName} {Social.firstName}</h3>
+        const lname = <h3 style={p}>{Social.lastName}<span>&#160;</span>{Social.firstName}</h3>
+    
         if (Social.signatureStyle === '1'){
             return (
-                <table className="col-sm-6 col-xs-12 gon">
-                    <tbody style={j}>
-                        <tr>
+            <table className="col-sm-6 col-xs-12 ">
+                <tbody style={j}>
+                    <tr>
+                        <td>{lname}</td>
+                    </tr>
+                    <tr colspan="2">
                         <td>{img}</td>
-                        </tr>
-                        <tr>
-                        <td>
-                            {name}
-                        <i>{Social.jobTitle}</i>
-                        <p>{Social.department}</p>
-                        <h4>
-                                <b>{Social.companyName}</b>
-                            </h4>
-                        <div>{pho}{tel}</div>
-                        {fax}
-                        {add}
-                        {add2}
-                        {web}
-                        {email}
+                    </tr>
+                    <tr colspan="2">
+                        <td>{Social.jobTitle}</td>
+                    </tr>
+                    <tr colspan="2">
+                        <td>{Social.department}</td>
+                    </tr>
+                    <tr colspan="2">
+                        <td>{Social.companyName}</td>
+                    </tr>
+                    <tr>
+                        <td>{tel}</td>
+                        <td><span>{pho}</span></td>
+                    </tr>
+                    <tr colspan="2">
+                        <td>{fax}</td>
+                    </tr>
+                    <tr colspan="2">
+                        <td>{add}</td>
+                    </tr>
+                    <tr colspan="2">
+                        <td>{add2}</td>
+                    </tr>
+                    <tr>
+                        <td>{web}</td>
+                        <td>{email}</td>
+                    </tr>
+                    <tr>
+                    <td style={{display:'inline-flex', marginBottom:'0px'}}>
+                        {fac}{twt}{lin}{Ig}
                         </td>
+                    </tr>
+                </tbody>
+            </table>
+            )
+        }
+        if (Social.signatureStyle === '2'){
+            return (
+                <table className="col-sm-6 col-xs-12 ">
+                    <tbody style={j}>
+                    <tr>
+                        <td>{lname}</td>
+                    </tr>
+                        <tr colspan="2">
+                            <td>{Social.jobTitle}</td>
+                        </tr>
+                        <tr colspan="2">
+                            <td>{Social.department}</td>
+                        </tr>
+                        <tr colspan="2">
+                            <td>{Social.companyName}</td>
                         </tr>
                         <tr>
-                            <td>
-                        <div className="dis">
+                            <td>{tel}</td>
+                            <td><span>{pho}</span></td>
+                        </tr>
+                        <tr colspan="2">
+                            <td>{fax}</td>
+                        </tr>
+                        <tr colspan="2">
+                            <td>{add}</td>
+                        </tr>
+                        <tr colspan="2">
+                            <td>{add2}</td>
+                        </tr>
+                        <tr>
+                            <td>{web}</td>
+                            <td>{email}</td>
+                        </tr>
+                        <tr>
+                        <td style={{display:'inline-flex', marginBottom:'0px'}}>
                             {fac}{twt}{lin}{Ig}
-                        </div>
-                        </td>
+                            </td>
+                        </tr>
+                        <tr colspan="2">
+                            <td>{img}</td>
                         </tr>
                     </tbody>
                 </table>
             )
         }
-        if (Social.signatureStyle === '2'){
-            return (
-                <div className="col-sm-6 col-xs-12 gon">
-                    <div style={j}>
-                        {name}
-                        <i>{Social.jobTitle}</i>
-                        <p>{Social.department}</p>
-                        <h4>
-                            <b>{Social.companyName}</b>
-                        </h4>
-                        <div>{pho}{tel}</div>
-                        {fax}
-                        {add}
-                        {add2}
-                        {web}
-                        {email}
-                        <div className="dis">
-                            {fac}{twt}{lin}{Ig}
-                        </div>
-                        {img}
-                    </div>
-                </div>
-            )
-        }
         if (Social.signatureStyle === '3'){
             return (
-                <table className=" row col-xs- go">
+                <table className=" row col-sm-6 go">
                     <tbody>
                     <tr>
-                    <td>
-                        {img}</td>
-                
-                    <td style={bl}>
-                    {name}
-                        <i>{Social.jobTitle}</i>
-                        <p>{Social.department}</p>
-                        <h4>
-                            <b>{Social.companyName}</b>
-                        </h4>
-                        <div>{pho}{tel}</div>
-                        {fax}
-                        {add}
-                        {add2}
-                        {web}
-                        {email}
-                        <div className="dis">
-                            {fac}{twt}{lin}{Ig}
-                        </div>
-                    </td>
+                        <td>
+                        {img}
+                        </td>
+                        <tb>
+                        <table style={bl} >
+                            <tbody>
+                            <tr>
+                                <td>{lname}</td>
+                            </tr>
+                            <tr colspan="2">
+                                <td>{Social.jobTitle}</td>
+                            </tr>
+                            <tr colspan="2">
+                                <td>{Social.department}</td>
+                            </tr>
+                            <tr colspan="2">
+                                <td>{Social.companyName}</td>
+                            </tr>
+                            <tr>
+                                <td>{tel}</td>
+                                <td><span>{pho}</span></td>
+                            </tr>
+                            <tr colspan="2">
+                                <td>{fax}</td>
+                            </tr>
+                            <tr colspan="2">
+                                <td>{add}</td>
+                            </tr>
+                            <tr colspan="2">
+                                <td>{add2}</td>
+                            </tr>
+                            <tr>
+                                <td>{web}</td>
+                                <td>{email}</td>
+                            </tr>
+                            <tr>
+                                <td style={{display:'inline-flex', marginBottom:'0px'}}>
+                                {fac}{twt}{lin}{Ig}
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        </tb>
                     </tr>
                     </tbody>
                 </table>
             )
         }
         return (
-            <div className="col-sm-6 col-xs-12 gon">
-                <div style={j}>
-                    {img}
-                    {name}
-                    <i>{Social.jobTitle}</i>
-                    <p>{Social.department}</p>
-                    <h4>
-                            <b>{Social.companyName}</b>
-                        </h4>
-                    <div>{pho}{tel}</div>
-                    {fax}
-                    {add}
-                    {add2}
-                    {web}
-                    {email}
-                    <div className="dis">
-                        {fac}{twt}{lin}{Ig}
-                    </div>
-                </div>
-            </div>
+            <table className="col-sm-6 col-xs-12 ">
+            <tbody style={j}>
+            <tr colspan="2">
+                <td>{img}</td>
+            </tr>
+            <tr>
+                <td>{lname}</td>
+            </tr>
+            <tr colspan="2">
+                <td>{Social.jobTitle}</td>
+            </tr>
+            <tr colspan="2">
+                <td>{Social.department}</td>
+            </tr>
+            <tr colspan="2">
+                <td>{Social.companyName}</td>
+            </tr>
+            <tr>
+                <td>{tel}</td>
+                <td><span>{pho}</span></td>
+            </tr>
+            <tr colspan="2">
+                <td>{fax}</td>
+            </tr>
+            <tr colspan="2">
+                <td>{add}</td>
+            </tr>
+            <tr colspan="2">
+                <td>{add2}</td>
+            </tr>
+            <tr>
+                <td>{web}</td>
+                <td>{email}</td>
+            </tr>
+            <tr>
+            <td style={{display:'inline-flex', marginBottom:'0px'}}>
+                {fac}{twt}{lin}{Ig}
+                </td>
+            </tr>
+            </tbody>
+        </table>
         );
     }
 }

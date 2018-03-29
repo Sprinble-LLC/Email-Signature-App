@@ -55,8 +55,10 @@ class App extends Component {
 					<hr/>
 					<div className="container">
 						<div className="row">
+							<div className="col-sm-">
 							<AppArea updateSign={this.updateSign} Social={this.state.Signs} addSign ={this.addSign}/>
-							<div>
+							</div>
+							<div className="col-sm-6">
 							<p style={aStyle}>Signature Preview</p>
 							<AppView Social={this.state.Signs}/>
 							</div>

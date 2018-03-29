@@ -16,6 +16,12 @@ export default class AppArea extends Component {
 				return document.querySelector('#snippet');
 			}
 		});
+		new Clipboard('.html', {
+			text: function() {
+				var htmlBlock = document.querySelector('#snippet');
+				return htmlBlock.innerHTML;
+			}
+		});
 		clipboard.on('success', function(e) {
 			console.log(e);
 		});
@@ -71,7 +77,7 @@ export default class AppArea extends Component {
 							<div className="modal-footer col-sm-12">
 								<button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
 								<button type="button" id="clipper" data-clipboard-target='#snippet' className="copyButton">Selet email Signature</button>
-								
+								<button type="button" id="clipper" data-clipboard-target='#snippet' className="html">Selet email Signature Source Code</button>
 							</div>
 						</div>
 					</div>
