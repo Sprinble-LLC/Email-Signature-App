@@ -21,8 +21,6 @@ class App extends Component {
 		  const Signs = {...this.state.Signs};
 		  Object.assign(Signs, Social);
 		  this.setState({ Signs });
-		  console.log(this.state.Signs.signatureStyle)
-		  console.log(this.state.Signs.signatureStyle === '1')
 	  }
 	  updateSign = (updatedSign) => {
 		const Signs = {...this.state.Signs};

@@ -48,7 +48,6 @@ export default class Social extends Component {
                     </div>
                    
                 </div>
-                 <button className="btn btn-primary" type="submit">Create Email Signature</button><span>&emsp;</span>
                 <button type="reset" className="btn btn-danger">Reset Form input</button>
             </form>
         );

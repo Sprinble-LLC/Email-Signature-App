@@ -7,7 +7,6 @@ export default class Style extends Component {
     }
     createSign(event) {
         event.preventDefault();
-        console.log('GOnna make some signature! 🎣');
         const Social = {
             signatureStyle : this.signatureStyle.value,
             textColor: this.textColor.value,
@@ -33,10 +32,10 @@ export default class Style extends Component {
                 <div className="form-group col-sm-6">
                     <label htmlFor="signatureStyle">Signature Style</label>
                     <select value={this.props.Social.signatureStyle} className="form-control" ref={(input) => this.signatureStyle  = input} onChange={(e) => this.handleChange(e)} name="signatureStyle">
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                        <option value="4">Four</option>
+                        <option value="">Image-Top view</option>
+                        <option value="1">Name-top view</option>
+                        <option value="2">Image-bottom view</option>
+                        <option value="3">Two-column view</option>
                     </select>
                 </div>
                 <div className="form-group col-sm-6">

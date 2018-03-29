@@ -8,26 +8,28 @@ import Clipboard from 'clipboard';
 export default class AppArea extends Component {
 	
 	componentDidMount() {
-        new Clipboard('.copyButton', {
+        new Clipboard('#copyButton', {
             target: () => document.getElementById('snippet')
 		});
-		var clipboard = new Clipboard('.copyButton', {
+		var clipboard = new Clipboard('#copyButton', {
 			target: function() {
 				return document.querySelector('#snippet');
 			}
 		});
-		new Clipboard('.html', {
+		var yemi = new Clipboard('#html', {
 			text: function() {
 				var htmlBlock = document.querySelector('#snippet');
 				return htmlBlock.innerHTML;
 			}
 		});
 		clipboard.on('success', function(e) {
-			console.log(e);
+			alert('Email Signature Copied To Clipboard')
 		});
-		
+		yemi.on('success', function(e) {
+			alert('Email Signature Source Code Copied to Clipboard')
+		});
 		clipboard.on('error', function(e) {
-			console.log(e);
+			alert('Email Signature Not Copied to Clipboard')
 		});
 	}
 	render() {
@@ -75,9 +77,9 @@ export default class AppArea extends Component {
 								</div>
 							</div>
 							<div className="modal-footer col-sm-12">
-								<button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
-								<button type="button" id="clipper" data-clipboard-target='#snippet' className="copyButton">Selet email Signature</button>
-								<button type="button" id="clipper" data-clipboard-target='#snippet' className="html">Selet email Signature Source Code</button>
+								<button type="button" className="btn btn-default" data-dismiss="modal">Close</button><span>&#160;</span>
+								<button type="button" id="copyButton" data-clipboard-target='#snippet' className="btn btn-primary">Selet email Signature</button><span>&#160;</span>
+								<button type="button" id="html" data-clipboard-target='#snippet' className="btn btn-danger">Selet email Signature Source Code</button>
 							</div>
 						</div>
 					</div>

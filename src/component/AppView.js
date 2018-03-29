@@ -61,34 +61,32 @@ export default class AppView extends Component {
                     <tr>
                         <td>{lname}</td>
                     </tr>
-                    <tr colspan="2">
+                    <tr colSpan="2">
                         <td>{img}</td>
                     </tr>
-                    <tr colspan="2">
+                    <tr colSpan="2">
                         <td>{Social.jobTitle}</td>
                     </tr>
-                    <tr colspan="2">
+                    <tr colSpan="2">
                         <td>{Social.department}</td>
                     </tr>
-                    <tr colspan="2">
+                    <tr colSpan="2">
                         <td>{Social.companyName}</td>
                     </tr>
                     <tr>
-                        <td>{tel}</td>
-                        <td><span>{pho}</span></td>
+                        <td>{tel}<span>&#160;</span>{pho}</td>
                     </tr>
-                    <tr colspan="2">
+                    <tr colSpan="2">
                         <td>{fax}</td>
                     </tr>
-                    <tr colspan="2">
+                    <tr colSpan="2">
                         <td>{add}</td>
                     </tr>
-                    <tr colspan="2">
+                    <tr colSpan="2">
                         <td>{add2}</td>
                     </tr>
                     <tr>
-                        <td>{web}</td>
-                        <td>{email}</td>
+                        <td>{web}<span>&#160;</span>{email}</td>
                     </tr>
                     <tr>
                     <td style={{display:'inline-flex', marginBottom:'0px'}}>
@@ -106,38 +104,36 @@ export default class AppView extends Component {
                     <tr>
                         <td>{lname}</td>
                     </tr>
-                        <tr colspan="2">
+                        <tr colSpan="2">
                             <td>{Social.jobTitle}</td>
                         </tr>
-                        <tr colspan="2">
+                        <tr colSpan="2">
                             <td>{Social.department}</td>
                         </tr>
-                        <tr colspan="2">
+                        <tr colSpan="2">
                             <td>{Social.companyName}</td>
                         </tr>
                         <tr>
-                            <td>{tel}</td>
-                            <td><span>{pho}</span></td>
+                            <td>{tel}<span>&#160;</span>{pho}</td>
                         </tr>
-                        <tr colspan="2">
+                        <tr colSpan="2">
                             <td>{fax}</td>
                         </tr>
-                        <tr colspan="2">
+                        <tr colSpan="2">
                             <td>{add}</td>
                         </tr>
-                        <tr colspan="2">
+                        <tr colSpan="2">
                             <td>{add2}</td>
                         </tr>
                         <tr>
-                            <td>{web}</td>
-                            <td>{email}</td>
+                            <td>{web}<span>&#160;</span>{email}</td>
                         </tr>
                         <tr>
                         <td style={{display:'inline-flex', marginBottom:'0px'}}>
                             {fac}{twt}{lin}{Ig}
                             </td>
                         </tr>
-                        <tr colspan="2">
+                        <tr colSpan="2">
                             <td>{img}</td>
                         </tr>
                     </tbody>
@@ -158,31 +154,29 @@ export default class AppView extends Component {
                             <tr>
                                 <td>{lname}</td>
                             </tr>
-                            <tr colspan="2">
+                            <tr colSpan="2">
                                 <td>{Social.jobTitle}</td>
                             </tr>
-                            <tr colspan="2">
+                            <tr colSpan="2">
                                 <td>{Social.department}</td>
                             </tr>
-                            <tr colspan="2">
+                            <tr colSpan="2">
                                 <td>{Social.companyName}</td>
                             </tr>
                             <tr>
-                                <td>{tel}</td>
-                                <td><span>{pho}</span></td>
+                                <td>{tel}<span>&#160;</span>{pho}</td>
                             </tr>
-                            <tr colspan="2">
+                            <tr colSpan="2">
                                 <td>{fax}</td>
                             </tr>
-                            <tr colspan="2">
+                            <tr colSpan="2">
                                 <td>{add}</td>
                             </tr>
-                            <tr colspan="2">
+                            <tr colSpan="2">
                                 <td>{add2}</td>
                             </tr>
                             <tr>
-                                <td>{web}</td>
-                                <td>{email}</td>
+                                <td>{web}<span>&#160;</span>{email}</td>
                             </tr>
                             <tr>
                                 <td style={{display:'inline-flex', marginBottom:'0px'}}>
@@ -200,37 +194,35 @@ export default class AppView extends Component {
         return (
             <table className="col-sm-6 col-xs-12 ">
             <tbody style={j}>
-            <tr colspan="2">
+            <tr colSpan="2">
                 <td>{img}</td>
             </tr>
             <tr>
                 <td>{lname}</td>
             </tr>
-            <tr colspan="2">
+            <tr colSpan="2">
                 <td>{Social.jobTitle}</td>
             </tr>
-            <tr colspan="2">
+            <tr colSpan="2">
                 <td>{Social.department}</td>
             </tr>
-            <tr colspan="2">
+            <tr colSpan="2">
                 <td>{Social.companyName}</td>
             </tr>
             <tr>
-                <td>{tel}</td>
-                <td><span>{pho}</span></td>
+                <td>{tel}<span>&#160;</span>{pho}</td>
             </tr>
-            <tr colspan="2">
+            <tr colSpan="2">
                 <td>{fax}</td>
             </tr>
-            <tr colspan="2">
+            <tr colSpan="2">
                 <td>{add}</td>
             </tr>
-            <tr colspan="2">
+            <tr colSpan="2">
                 <td>{add2}</td>
             </tr>
             <tr>
-                <td>{web}</td>
-                <td>{email}</td>
+                <td>{web}<span>&#160;</span>{email}</td>
             </tr>
             <tr>
             <td style={{display:'inline-flex', marginBottom:'0px'}}>
