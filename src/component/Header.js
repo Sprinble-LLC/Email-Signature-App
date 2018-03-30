@@ -1,4 +1,5 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import  logo from '../img/logo.png';
 
 export default class Header extends Component {
     render() {
@@ -6,15 +7,15 @@ export default class Header extends Component {
             fontSize: '35px'
         }
         return (
-            <div className="jumbotron">
+            <div className="jumbotron bac">
                 <div className="container">
                     <div className="col-sm-6 ">
-                        <a href="https://placeholder.com"><img src="http://via.placeholder.com/350x150" className="img-responsive none" alt="eget tempor nunc."/></a>
+                        <img src={logo} className="img-responsive none" alt="Signature-preview"/>
                     </div>
-                    <div className="col-md-6 col-sm-12 p">
+                    <div className=" col-sm-6 p">
                         <p style={mStyle}>Curabitur ac dictum odio, eget tempor nunc. Aenean auctor
                             pellentesque orci a laoreet. .</p>
-                        <button type="button" className="btn btn-primary btn-lg">quis velit et eros cursus sagittis</button>
+                        <button type="button" className="btn btn-lg p bt"><span>quis velitrsus sagittis</span></button>
                     </div>
                 </div>
             </div>
