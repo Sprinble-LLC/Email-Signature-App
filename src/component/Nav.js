@@ -8,11 +8,7 @@ class Nav extends Component {
 			marginRight: '5px'
 		};
 		return (
-<<<<<<< HEAD
 			<nav className="navbar navbar-inverse mag">
-=======
-			<nav className="navbar navbar-default mag">
->>>>>>> 1ba17a4f1eb6b0bcd0d7536b74932252156683c8
 				<div className="container">
 					<div className="navbar-header">
 						<button

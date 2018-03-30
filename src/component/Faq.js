@@ -7,17 +7,10 @@ export default class Faq extends Component {
             overflowY: 'scroll'
         }
         return (
-<<<<<<< HEAD
             <div className="container pad">
                 <div className="panel-group col-sm-11">
                     <div className="panel panel-default">
                         <div className="panel-headng faq">
-=======
-            <div className="row pad">
-                <div className="panel-group col-sm-11">
-                    <div className="panel panel-default">
-                        <div className="panel-heading">
->>>>>>> 1ba17a4f1eb6b0bcd0d7536b74932252156683c8
                             <h4 className="panel-title">
                                 <a data-toggle="collapse" href="#collapse1">FAQ</a>
                             </h4>
