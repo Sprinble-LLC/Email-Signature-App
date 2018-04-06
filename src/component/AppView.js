@@ -14,10 +14,11 @@ export default class AppView extends Component {
         const dStyle = {margin: '5px'}
         const cStyle = {display: 'none'}
         const bStyle = {fontSize: fs,fontFamily: ff, color : tc}
-        const bl = {borderLeftColor : fc , borderLeftStyle: 'solid',borderLeftWidth: '1px',paddingRight:'12px' ,color : tc} 
+        const bl = {borderLeftColor : fc , borderLeftStyle: 'solid',borderLeftWidth: '1px',color : tc} 
         const fon = '3';
         const p = fon !== '3'? {display: 'none'} : {color: fc,fontSize: fs,fontFamily: ff, width:'20'};
         const j = fon !== '3'? {display: 'none'} : {color: tc,fontSize: fs,fontFamily: ff};
+        const w = "mailto:"+ Social.email;
         const dis = Social.facebook === undefined || Social.facebook === "";
         const sty = dis ? cStyle: dStyle;
         const disp = Social.twitter === undefined || Social.twitter === "";
@@ -50,13 +51,13 @@ export default class AppView extends Component {
         const add = <span style={h}><span style={p}>add 1:<span>&#160;</span></span>{Social.address1}</span>
         const add2 = <span style={z}><span style={p}>add 2:<span>&#160;</span></span>{Social.address2}</span>
         const web = <a href={Social.website} style={l}><span style={p}>web:<span>&#160;</span></span>{Social.website}</a>
-        const email = <a href={Social.email}style={n}><span style={p}>email:<span>&#160;</span></span>{Social.email}</a>
+        const email = <a href={w}style={n}><span style={p}>email:<span>&#160;</span></span>{Social.email}</a>
         const img = <img className="img-responsive" src={Social.avatar} alt=""/>
         const lname = <h3 style={p}>{Social.lastName}<span>&#160;</span>{Social.firstName}</h3>
     
         if (Social.signatureStyle === '1'){
             return (
-            <table className="col-sm-6 col-xs-12 ">
+            <table className="col-sm-6 col-xs-12 opc">
                 <tbody style={j}>
                     <tr>
                         <td>{lname}</td>
@@ -99,7 +100,7 @@ export default class AppView extends Component {
         }
         if (Social.signatureStyle === '2'){
             return (
-                <table className="col-sm-6 col-xs-12 ">
+                <table className="col-sm-10 col-xs-12 ">
                     <tbody style={j}>
                     <tr>
                         <td>{lname}</td>
@@ -142,7 +143,7 @@ export default class AppView extends Component {
         }
         if (Social.signatureStyle === '3'){
             return (
-                <table className=" row col-sm-6 go">
+                <table className=" row col-sm-6 go opc">
                     <tbody>
                     <tr>
                         <td>
@@ -192,7 +193,7 @@ export default class AppView extends Component {
             )
         }
         return (
-            <table className="col-sm-6 col-xs-12 ">
+            <table className="col-sm-6 col-xs-12 opc">
             <tbody style={j}>
             <tr colSpan="2">
                 <td>{img}</td>

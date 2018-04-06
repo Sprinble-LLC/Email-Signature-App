@@ -30,14 +30,14 @@ class App extends Component {
 
 	render() {
 
-	const aStyle = {fontSize: '20px'}
+	const aStyle = {fontSize: '20px', paddingTop: '30px'}
 		return (
 			<div>
 				<Nav/>
 				<Header/>
-				<div className="container">
-					<div className="row">
-						<div className="col-sm-12">
+				<div className="">
+					<div className="container-fluid whi">
+						<div className=" contanier pad2 col-sm-12">
 							<h2>
 								Phasellus lorem tortor, pretium sed tortor sit amet, sagittis fermentum sapien.
 							</h2>
@@ -49,20 +49,24 @@ class App extends Component {
 								bibendum. Ut quis felis lacus. Phasellus lorem tortor, pretium sed tortor sit
 								amet, sagittis fermentum sapien. Aliquam ut suscipit ligula.</p>
 						</div>
+						
 					</div>
 					<hr/>
-					<div className="container">
+					<div className="container-fluid back">
 						<div className="row">
 							<div className="col-sm-">
 							<AppArea updateSign={this.updateSign} Social={this.state.Signs} addSign ={this.addSign}/>
 							</div>
-							<div className="col-sm-6">
+							
+							<div className="col-sm-6 ">
 							<p style={aStyle}>Signature Preview</p>
 							<AppView Social={this.state.Signs}/>
 							</div>
 						</div>
 					</div>
+					<div className='container-fluid'>
 					<Faq/>
+					</div>
 				</div>
 				<Footer />
 			</div>
