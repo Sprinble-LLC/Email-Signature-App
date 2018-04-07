@@ -57,7 +57,7 @@ export default class AppView extends Component {
     
         if (Social.signatureStyle === '1'){
             return (
-            <table className="col-sm-6 col-xs-12 opc">
+            <table className="opc">
                 <tbody style={j}>
                     <tr>
                         <td>{lname}</td>
@@ -100,7 +100,7 @@ export default class AppView extends Component {
         }
         if (Social.signatureStyle === '2'){
             return (
-                <table className="col-sm-10 col-xs-12 ">
+                <table className="">
                     <tbody style={j}>
                     <tr>
                         <td>{lname}</td>
@@ -143,7 +143,7 @@ export default class AppView extends Component {
         }
         if (Social.signatureStyle === '3'){
             return (
-                <table className=" row col-sm-6 go opc">
+                <table className="">
                     <tbody>
                     <tr>
                         <td>
@@ -193,7 +193,7 @@ export default class AppView extends Component {
             )
         }
         return (
-            <table className="col-sm-6 col-xs-12 opc">
+            <table className="">
             <tbody style={j}>
             <tr colSpan="2">
                 <td>{img}</td>
