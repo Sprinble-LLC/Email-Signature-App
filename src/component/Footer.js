@@ -3,17 +3,17 @@ import React, {Component} from 'react';
 export default class Footer extends Component {
     render() {
         return (
-            <footer className="blog-footer">
-                <div className="container">
-                <h3>Lorem Ipsum</h3>
-                    <p>Maecenas cursus rutrum purus, vitae tristique magna auctor quis. Donec nec
-                        lorem nibh. Maecenas viverra nulla lectus, vitae imperdiet sapien mattis ut.
-                        Maecenas congue elit in dolor dictum, eu elementum arcu sagittis. .</p>
-                    <p>
-                        <a href="/#">Back to top</a>
-                    </p>
-                </div>
-            </footer>
+            <section id="footer">
+				<ul className="icons">
+					<li><a href="https://twitter.com/sprinble" className="icon alt fa-twitter"><span className="label">Twitter</span></a></li>
+					<li><a href="https://www.facebook.com/sprinble/" className="icon alt fa-facebook"><span className="label">Facebook</span></a></li>
+					<li><a href="https://instagram.com/sprinble/" className="icon alt fa-instagram"><span className="label">Instagram</span></a></li>
+					<li><a href="https://github.com/sprinble/" className="icon alt fa-github"><span className="label">GitHub</span></a></li>
+				</ul>
+				<ul className="copyright">
+					<li>Built with  <i className="icon alt fa-heart"></i>  by Sprinble</li>
+				</ul>
+			</section>
         );
     }
 }

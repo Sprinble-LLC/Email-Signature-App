@@ -33,36 +33,45 @@ export default class AppArea extends Component {
 		});
 	}
 	render() {
-		const aStyle = {
-			fontSize: '20px'
-		}
-
 		return (
-			<div className="col-sm-6 col-xs-12">
-				<h2 style={aStyle}>Your Information.</h2>
-				<ul className="nav nav-pills col-sm-12 ">
-					<li className="active">
-						<a id="lo" data-toggle="tab" href="#home">Main</a>
-					</li>
-					<li>
-						<a id="lo" data-toggle="tab" href="#menu1">Social</a>
-					</li>
-					<li>
-						<a id="lo" data-toggle="tab" href="#menu2">Style</a>
-					</li>
-				</ul>
-				<div className="tab-content gone">
-					<div id="home" className="tab-pane fade in active">
-						<Main updateSign={this.props.updateSign} Social={this.props.Social} addSign={this.props.addSign}/>
+			<section id="two" className="main style2 special">
+				<div className="container">
+					<header className="major">
+						<h2>Your Information.</h2>
+					</header>
+				
+					<div className="row 150%">
+						<div className="12u 12u$(medium)">
+							<ul className="nav nav-pills 12u">
+								<li className="active">
+									<a id="lo" data-toggle="tab" href="#home">Main</a>
+								</li>
+								<li>
+									<a id="lo" data-toggle="tab" href="#menu1">Social</a>
+								</li>
+								<li>
+									<a id="lo" data-toggle="tab" href="#menu2">Style</a>
+								</li>
+							</ul>							
+						</div>
+						<div className="6u 12u$(medium)">
+							<div className="tab-content gone">
+								<div id="home" className="tab-pane fade in active">
+									<Main updateSign={this.props.updateSign} Social={this.props.Social} addSign={this.props.addSign}/>
+								</div>
+								<div id="menu1" className="tab-pane fade">
+									<Social updateSign={this.props.updateSign} Social={this.props.Social} addSign={this.props.addSign}/>
+								</div>
+								<div id="menu2" className="tab-pane fade">
+									<Style updateSign={this.props.updateSign} Social={this.props.Social} addSign={this.props.addSign}/>
+								</div>						
+							</div>
+						</div>
+						<div className="4u 12u$(medium)">
+							<AppView Social={this.props.Social}/>
+						</div>
 					</div>
-					<div id="menu1" className="tab-pane fade">
-						<Social updateSign={this.props.updateSign} Social={this.props.Social} addSign={this.props.addSign}/>
-					</div>
-					<div id="menu2" className="tab-pane fade">
-						<Style updateSign={this.props.updateSign} Social={this.props.Social} addSign={this.props.addSign}/>
-					</div>
-					
-				</div><br/>
+				</div>
 				<a className="btn btn-success" data-toggle="modal" href='#modal-id'>Generate Email Signature</a>
 				<div className="modal fade" id="modal-id">
 					<div className="modal-dialog">
@@ -84,7 +93,7 @@ export default class AppArea extends Component {
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>	
 		);
 	}
 }
