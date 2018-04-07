@@ -1,0 +1,106 @@
+.pad{
+  padding: 30px;
+}
+.pad2{
+  padding: 40px;
+}
+.bac{
+  background-image: url('../img/header-bg.jpg');
+  background-size: cover;
+  color: #e5e5e5;  
+  margin-bottom: 0px;
+}
+.back{
+  background-image: url('../img/intro-bg.jpg');
+  background-size: cover;
+  color: white;
+  padding-bottom: 50px;
+}
+.opc{
+  background-color: white;
+  opacity: 0.96;
+  color: black;
+  z-index: 10;
+  min-width: 300px;
+}
+.lo{
+  color:white
+}
+label{
+  color: white;
+}
+.whi{
+  opacity: 0.8;
+}
+.bt{
+  background-color: #222222;
+  border-radius: 0;
+}
+.bt:hover{
+  background-color: transparent;
+  border: 1px solid #4d4d4d;
+  color: white;
+  border-radius: 0;
+}
+.bt:visited{
+  color: white;
+}
+.mag{
+  margin-bottom: 0px;
+}
+.bak{
+  background-color: #4d4d4d;
+}
+.blog-footer {
+  padding: 2.5rem 0;
+  color: rgb(234, 228, 228);
+  text-align: center;
+  background-image: url('../img/banner-bg.jpg');
+
+}
+.faq{
+  color: white;
+  background-color: #4d4d4d;
+  border-color: #ddd;
+  padding: 20px 30px 20px 20px;
+}
+.bl{
+  border-left-style: solid;
+  border-left-width: 2px;
+}
+.font18{
+  font-size: 17.5px;
+}
+.dis{
+  display: inline-flex;
+  margin-bottom: 0px;
+}
+.border{
+  padding-top: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.line-h{
+  line-height: 2px;
+}
+.gon>p{
+  margin:0px;
+}
+.gone{
+  padding-top: 60px;
+}
+.gon{
+  padding-top: 0px;
+}
+li{
+  list-style-type: none;
+}
+@media only screen and (max-width: 991px) {
+  .none{
+    display: none;
+  }
+  .p{
+    text-align: center;
+  }
+}
