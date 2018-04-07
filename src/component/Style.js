@@ -68,8 +68,10 @@ export default class Style extends Component {
                     </select>
                 </div>
             </div>
+            <div className="col-lg-12">
             <button className="btn btn-primary" type="submit">Create Email Signature</button><span>&emsp;</span>
             <button type="reset" className="btn btn-danger">Reset Form input</button>
+            </div>
         </form>
         );
     }
