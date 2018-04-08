@@ -37,21 +37,18 @@ export default class Main extends Component {
         this.props.updateSign(updatedSign);
       }
     render() {
-        const fontStyle = {
-            color: '#ffffff'
-        };
         return (
             <form ref={(input) => this.SignForm = input} onSubmit={(e) => this.createSign(e)} >
                 <div className="form-row">
                     <div className="col-lg-6 form-group">
-                        <label htmlFor="firstName">First Name</label>
-                        <input className="form-control" type="text" ref={(input) => this.firstName = input} name="firstName" onChange={(e) => this.handleChange(e)} placeholder="First Name"  />
-                    </div>
-                    <div className="col-lg-6 form-group">
                         <label htmlFor="lastName">Last Name</label>
                         <input className="form-control" type="text" ref={(input) => this.lastName  = input} onChange={(e) => this.handleChange(e)} name="lastName" placeholder="
                         Last Name"  />
-                    </div>                    
+                    </div>  
+                    <div className="col-lg-6 form-group">
+                        <label htmlFor="firstName">First Name</label>
+                        <input className="form-control" type="text" ref={(input) => this.firstName = input} name="firstName" onChange={(e) => this.handleChange(e)} placeholder="First Name"  />
+                    </div>              
                     <div className="col-lg-6 form-group">
                         <label htmlFor="jobTitle">Job Title</label>
                         <input className="form-control" type="text" ref={(input) => this.jobTitle  = input} onChange={(e) => this.handleChange(e)} name="jobTitle" placeholder="Job Title"  />

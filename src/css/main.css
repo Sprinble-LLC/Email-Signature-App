@@ -2511,20 +2511,22 @@
 
 	table {
 		margin: 0 0 2em 0;
-		width: 100%;
+    	font-size: 100%;
 	}
 
 		table tbody tr {
 			border-left: 0;
-			border-right: 0;
+			border-right: 0;   
+			line-height: 21px;
+			margin-top: 7px;
 		}
 
-			table tbody tr:nth-child(2n + 1) {
+			/* table tbody tr:nth-child(2n + 1) {
 				background-color: rgba(144, 144, 144, 0.075);
-			}
+			} */
 
 		table td {
-			padding: 0.75em 0.75em;
+			padding: 0.05em 0.55em;
 		}
 
 		table th {

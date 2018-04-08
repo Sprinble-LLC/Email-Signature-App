@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import '../css/main.css';
 import Header from "./Header";
 import AppArea from "./AppArea";
-import AppView from "./AppView";
 import Footer from './Footer';
 
 

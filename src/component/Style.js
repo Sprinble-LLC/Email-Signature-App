@@ -70,7 +70,7 @@ export default class Style extends Component {
                     <label htmlFor="fontSize">Font Size</label>
                     <select className="form-control" ref={(input) => this.fontSize  = input} onChange={(e) => this.handleChange(e)} name="fontSize">
                         <option value="">Select Font Size</option>
-                        <option value="2rem">Large</option>
+                        <option value="1.5rem">Large</option>
                         <option value="1.3rem">Medium</option>
                         <option value="1rem">Small</option>
                     </select>
@@ -78,9 +78,9 @@ export default class Style extends Component {
                 <div className="form-group col-sm-6">
                     <label htmlFor="textAlign">Text Alignment</label>
                     <select className="form-control" ref={(input) => this.textAlign  = input} onChange={(e) => this.handleChange(e)} name="textAlign">
-                        <option value="center">Center</option>
-                        <option value="right">Right</option>
                         <option value="left">Left</option>
+                        <option value="right">Right</option>
+                        <option value="center">Center</option>
                     </select>
                 </div>
             </div>

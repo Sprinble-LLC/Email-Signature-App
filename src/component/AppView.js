@@ -27,11 +27,11 @@ export default class AppView extends Component {
         const bl = {
             color: tc
         }
-        const br ={
+        const br = {
 
             borderRightColor: fc,
             borderRightStyle: 'solid',
-            borderRightWidth: '1px',
+            borderRightWidth: '4px'
         }
         const fon = '3';
         const p = fon !== '3'
@@ -136,8 +136,8 @@ export default class AppView extends Component {
             <span style={p}>email:<span>&#160;</span>
             </span>{Social.email}</a>
         const img = <img src={Social.avatar} alt={Social.lastName}/>
-        const lname = <h3 style={p}>{Social.lastName}
-            <span>&#160;</span>{Social.firstName}</h3>
+        const lname = <b style={p}><p>{Social.lastName}
+            <span>&#160;</span>{Social.firstName}</p></b>
 
         if (Social.signatureStyle === '1') {
             return (
@@ -173,7 +173,10 @@ export default class AppView extends Component {
                         </tr>
                         <tr>
                             <td>{web}
-                                <span>&#160;</span>{email}</td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{email}</td>
                         </tr>
                         <tr>
                             <td
@@ -219,7 +222,10 @@ export default class AppView extends Component {
                         </tr>
                         <tr>
                             <td>{web}
-                                <span>&#160;</span>{email}</td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{email}</td>
                         </tr>
                         <tr>
                             <td
@@ -239,14 +245,18 @@ export default class AppView extends Component {
         }
         if (Social.signatureStyle === '3') {
             return (
-
+                
                 <table style={bl}>
                     <tbody style={j}>
                         <tr>
-                            <td rowSpan="10" style={br}>
+                            <td style={br}>
                                 {img}
                             </td>
-                            <td>{lname}</td>
+                            <td>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>{lname}</td>
                         </tr>
                         <tr colSpan="2">
                             <td>{Social.jobTitle}</td>
@@ -272,7 +282,10 @@ export default class AppView extends Component {
                         </tr>
                         <tr>
                             <td>{web}
-                                <span>&#160;</span>{email}</td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>{email}</td>
                         </tr>
                         <tr>
                             <td
@@ -284,7 +297,7 @@ export default class AppView extends Component {
                             </td>
                         </tr>
                     </tbody>
-                </table>
+                </table></td></tr></tbody></table>
             )
         }
         return (
@@ -320,7 +333,10 @@ export default class AppView extends Component {
                     </tr>
                     <tr>
                         <td>{web}
-                            <span>&#160;</span>{email}</td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>{email}</td>
                     </tr>
                     <tr>
                         <td

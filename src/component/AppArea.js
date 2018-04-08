@@ -71,12 +71,12 @@ export default class AppArea extends Component {
 								</div>						
 							</div>
 						</div>
-						<div className="6u 12u$(medium) col-sm-6">
+						<div className="6u 12u$(medium)">
 							<AppView Social={this.props.Social}/>
 						</div>
 					</div>
 				</div>
-				<a className="btn btn-lg btn-success" data-toggle="modal" href='#modal-id'><i className="icon fa fa-check"></i> Generate Email Signature</a>
+				<a className="btn btn-lg btn-success" style={{marginTop:'30px'}} data-toggle="modal" href='#modal-id'><i className="icon fa fa-check"></i> Generate Email Signature</a>
 				<div className="modal fade" id="modal-id">
 					<div className="modal-dialog">
 						<div className="modal-content">
