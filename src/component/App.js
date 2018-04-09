@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import '../css/main.css';
 import Header from "./Header";
 import AppArea from "./AppArea";
-import AppView from "./AppView";
 import Footer from './Footer';
 
 
@@ -30,7 +29,9 @@ class App extends Component {
 		return (
 				<div>
 					<Header/>
+					<div className="container">
 					<AppArea updateSign={this.updateSign} Social={this.state.Signs} addSign ={this.addSign}/>
+					</div>
 					<Footer/>
 				</div>
 		);

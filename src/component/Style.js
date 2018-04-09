@@ -13,7 +13,8 @@ export default class Style extends Component {
             feactureColor: this.feactureColor.value,
             linkcolor : this.linkcolor.value,
             fontFamily : this.fontFamily.value,
-            fontSize : this.fontSize.value
+            fontSize : this.fontSize.value,
+            textAlign : this.textAlign.value
         }
     this.props.addSign(Social);
   }
@@ -56,15 +57,30 @@ export default class Style extends Component {
                         <option value="">Select Font Style</option>
                         <option value="sans-serif">Sans serif</option>
                         <option value="serif">Serif</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Courier">Courier New</option>
+                        <option value="Arial">Arial</option>
+                        <option value="Franklin Gothic Medium">Franklin Gothic Medium</option>
+                        <option value="Segoe UI">Segoe UI</option>
+                        <option value="Verdana">Verdana</option>
+
                     </select>
                 </div>
                 <div className="form-group col-sm-6">
                     <label htmlFor="fontSize">Font Size</label>
                     <select className="form-control" ref={(input) => this.fontSize  = input} onChange={(e) => this.handleChange(e)} name="fontSize">
                         <option value="">Select Font Size</option>
-                        <option value="2rem">Large</option>
-                        <option value="1.7rem">Medium</option>
-                        <option value="1.3rem">Small</option>
+                        <option value="1.5rem">Large</option>
+                        <option value="1.3rem">Medium</option>
+                        <option value="1rem">Small</option>
+                    </select>
+                </div>
+                <div className="form-group col-sm-6">
+                    <label htmlFor="textAlign">Text Alignment</label>
+                    <select className="form-control" ref={(input) => this.textAlign  = input} onChange={(e) => this.handleChange(e)} name="textAlign">
+                        <option value="left">Left</option>
+                        <option value="right">Right</option>
+                        <option value="center">Center</option>
                     </select>
                 </div>
             </div>

@@ -2,10 +2,14 @@ p {
     margin: 0px;
     padding: 0px;
 }
-h4{
+
+h4 {
     margin: 0
 }
-.bo{
+a{ 
+    border: none;
+}
+.bo {
     background: #fff;
     padding: 20px;
     border: 1px solid #ccc;
@@ -14,34 +18,61 @@ h4{
     height: 400px;
     overflow: auto;
 }
-.modal-footer{
+
+.modal-footer {
     background-color: white;
 }
-table{
-    padding:"0" ;
-    border:"0";
-  }
-  td{
-      padding-right: 8px;
-  }
+
+table {
+    padding: "0";
+    border: "0";
+}
+
+td {
+    padding-right: 8px;
+}
 
 /* Add Animation */
+
 @-webkit-keyframes slideIn {
-    from {bottom: -300px; opacity: 0} 
-    to {bottom: 0; opacity: 1}
+    from {
+        bottom: -300px;
+        opacity: 0
+    }
+    to {
+        bottom: 0;
+        opacity: 1
+    }
 }
 
 @keyframes slideIn {
-    from {bottom: -300px; opacity: 0}
-    to {bottom: 0; opacity: 1}
+    from {
+        bottom: -300px;
+        opacity: 0
+    }
+    to {
+        bottom: 0;
+        opacity: 1
+    }
 }
 
 @-webkit-keyframes fadeIn {
-    from {opacity: 0} 
-    to {opacity: 1}
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
 }
 
 @keyframes fadeIn {
-    from {opacity: 0} 
-    to {opacity: 1}
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+td{
+    vertical-align: middle;
 }
